@@ -21,9 +21,9 @@ from bookings import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.booking_list, name='home'),  # Hier wordt de root-URL gekoppeld aan booking_list
+    path('', views.booking_list, name='home'),
     path('bookings/', include('bookings.urls')),
-
+    path('admin/', admin.site.urls),
 
 
 ]
