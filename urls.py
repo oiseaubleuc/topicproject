@@ -3,14 +3,13 @@ from django.contrib import admin
 from myapp import views
 
 urlpatterns = [
-    path('', views.home, name='home'),  # Homepagina
+    path('', views.home, name='home'),
     path('services/', views.services, name='services'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('book/<int:service_id>/', views.show_booking_form, name='show_booking_form'),
     path('book/appointment/', views.book_appointment, name='book_appointment'),
 
-    # Admin views voor aangepaste dashboard en beheer
     path('admin/dashboard/', views.admin_dashboard, name='admin_dashboard'),
     path('admin/bookings/', views.manage_bookings, name='manage_bookings'),
     path('admin/bookings/edit/<int:id>/', views.edit_booking, name='edit_booking'),
@@ -22,6 +21,5 @@ urlpatterns = [
     path('admin/customers/edit/<int:id>/', views.edit_customer, name='edit_customer'),
     path('admin/customers/delete/<int:id>/', views.delete_customer, name='delete_customer'),
 
-    # Standaard Django admin URL
     path('admin/', admin.site.urls),
 ]
