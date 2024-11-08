@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="booking-container">
+    <h2>Boek uw afspraak</h2>
+    <form action="{% url 'book_appointment' %}" method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="service_name">Servicenaam:</label>
+            <input type="text" id="service_name" name="service_name" value="{{ service.name }}" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Beschrijving:</label>
+            <textarea id="description" name="description" readonly>{{ service.description }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Prijs:</label>
+            <input type="text" id="price" name="price" value="{{ service.price }}" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="first_name">Voornaam:</label>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Naam:</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone_number">Telefoonnummer:</label>
+            <input type="tel" id="phone_number" name="phone_number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mailadres:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="appointment_date">Afspraakdatum:</label>
+            <input type="date" id="appointment_date" name="appointment_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="appointment_time">Afspraakuur:</label>
+            <input type="time" id="appointment_time" name="appointment_time" required>
+        </div>
+
+        <button type="submit">Boek Afspraak</button>
+    </form>
+</div>
+{% endblock %}

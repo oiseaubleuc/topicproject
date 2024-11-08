@@ -1,0 +1,469 @@
+
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.header {
+    background-color: #333;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar a {
+    color: #ff6600;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffa726;
+}
+
+.hero {
+    background-image: url("{% static 'images/background.png' %}");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e55a00;
+}
+
+.services {
+    padding: 40px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #ffa726;
+    margin-bottom: 10px;
+}
+
+.book-btn {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #e55a00;
+}
+
+.testimonials {
+    padding: 40px;
+    background-color: #f4f4f9;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+    padding: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #e55a00;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffa726;
+}
+
+.packages-container {
+    text-align: center;
+    color: #fff;
+    background-color: #111;
+    padding: 60px 20px;
+}
+
+.packages-container h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #ffa726;
+}
+
+.packages {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    width: 280px;
+    padding: 25px;
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
+
+.package-card .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.package-card ul.features {
+    list-style-type: none;
+    padding: 0;
+}
+
+.package-card ul.features li {
+    font-size: 1rem;
+    padding: 5px 0;
+}
+
+.choose-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.choose-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #111;
+    font-weight: bold;
+}
+
+.light {
+    background-color: #ffb74d;
+}
+
+.premium {
+    background-color: #6d4c41;
+}
+
+.unlimited {
+    background-color: #8d6e63;
+}
+
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+.about-us-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+}
+
+.about-us-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 30px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+
+.about-section .text {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    line-height: 1.6;
+    color: #666;
+}
+
+.about-section .photos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-section .photos img {
+    width: 280px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-section .photos img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-section .photos {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .about-section .text {
+        text-align: center;
+    }
+
+    .about-section .photos img {
+        width: 80%;
+    }
+}
+
+
+.booking-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    font-family: Arial, sans-serif;
+}
+
+.booking-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+    outline: none;
+}
+
+.form-group input[readonly],
+.form-group textarea[readonly] {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #bbb;
+    cursor: not-allowed;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e55a00;
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+    background-color: #cc4f00;
+}
+
+@media (max-width: 768px) {
+    .booking-container {
+        padding: 20px;
+    }
+
+    .booking-container h2 {
+        font-size: 1.8rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+    }
+}

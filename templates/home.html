@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Carwash Detailing{% endblock %}
+
+{% block content %}
+
+{% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+                <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<header class="hero" style="background-image: url('{% static "images/background.png" %}');">
+    <div class="hero-content">
+        <h1>Premium Car Detailing Services</h1>
+        <p>Experience the best in car care</p>
+        <a href="{% url 'services' %}" class="cta-button">Our Services</a>
+    </div>
+</header>
+
+
+
+<script>
+    setTimeout(function() {
+        const message = document.querySelector('.message-container');
+        if (message) {
+            message.style.display = 'none';
+        }
+    }, 30000);
+</script>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="admin-navbar">
+    <h1>Admin Dashboard</h1>
+    <nav class="navbar">
+        <a href="{% url 'admin_dashboard' %}" class="nav-item">Dashboard</a>
+        <a href="{% url 'manage_bookings' %}" class="nav-item">Beheer boekingen</a>
+        <a href="{% url 'manage_services' %}" class="nav-item">Beheer diensten</a>
+        <a href="{% url 'manage_customers' %}" class="nav-item">Beheer klanten</a>
+    </nav>
+</div>
+
+<div class="dashboard-content">
+    <div class="stats">
+        <div class="stat">
+            <h2>Totaal aantal boekingen</h2>
+            <p>{{ total_bookings }}</p>
+        </div>
+        <div class="stat">
+            <h2>Totaal aantal diensten</h2>
+            <p>{{ total_services }}</p>
+        </div>
+        <div class="stat">
+            <h2>Totaal aantal klanten</h2>
+            <p>{{ total_customers }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

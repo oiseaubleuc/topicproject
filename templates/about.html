@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}Over Ons - Carwash Detailing{% endblock %}
+{% block content %}
+<div class="about-us-container">
+    <h1>Over Ons</h1>
+    <p>Welkom bij Carwash Detailing! Wij zijn toegewijd aan het bieden van hoogwaardige, professionele schoonmaak- en detailservices voor auto's, waarbij we ons richten op kwaliteit en klanttevredenheid.</p>
+
+    <div class="about-section">
+        <div class="text">
+            <h2>Onze Diensten</h2>
+            <p>Wij bieden een breed scala aan services, van basisreiniging tot diepgaande detailing, polijsten, en interieurverzorging. Ons team van experts gebruikt de beste producten en technieken om uw voertuig weer als nieuw te laten stralen.</p>
+        </div>
+        <div class="photos">
+            <img src="{% static 'images/car wash service.jpg' %}" alt="Service Foto 1">
+            <img src="{% static 'images/car detailing process.jpg' %}" alt="Service Foto 2">
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="photos">
+            <img src="{% static 'images/car wash team.jpg' %}" alt="Team Foto 1">
+            <img src="{% static 'images/car interior cleaning.jpg' %}" alt="Team Foto 2">
+        </div>
+        <div class="text">
+            <h2>Onze Aanpak</h2>
+            <p>Bij Carwash Detailing geloven we in een persoonlijke benadering. Elk voertuig heeft unieke behoeften, en daarom bieden wij maatwerkoplossingen die aan de verwachtingen van onze klanten voldoen en deze overtreffen.</p>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="text">
+            <h2>Kwaliteit en Zorg</h2>
+            <p>Onze missie is om de beste carwash en detailing service te leveren met oog voor detail en een toewijding aan perfectie. We gebruiken alleen producten van hoge kwaliteit en houden ons team getraind op de nieuwste technieken.</p>
+        </div>
+        <div class="photos">
+            <img src="{% static 'images/model.jpg' %}" alt="Kwaliteit Foto 1">
+            <img src="{% static 'images/model2.jpg' %}" alt="Kwaliteit Foto 2">
+        </div>
+    </div>
+</div>
+{% endblock %}
